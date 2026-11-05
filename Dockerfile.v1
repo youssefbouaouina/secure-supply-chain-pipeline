@@ -1,0 +1,9 @@
+# v1: deliberately unhardened, used only as the "before" measurement.
+# Full JDK base image, root user, no digest pin, single stage.
+FROM eclipse-temurin:21-jdk@sha256:ebfbb18d11ff163ee83b21258acf12248af48d22a0fdfdc68fa1a1516c05976a
+
+WORKDIR /app
+COPY target/app.jar /app/app.jar
+
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]

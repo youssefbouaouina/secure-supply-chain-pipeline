@@ -1,0 +1,24 @@
+# Deliberately non-compliant manifest (v1) - used to measure policy violations.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supply-chain-demo
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: supply-chain-demo
+  template:
+    metadata:
+      labels:
+        app: supply-chain-demo
+    spec:
+      hostNetwork: true
+      containers:
+        - name: app
+          image: ghcr.io/youssefbouaouina/secure-supply-chain-pipeline:latest
+          ports:
+            - containerPort: 8080
+          securityContext:
+            privileged: true
