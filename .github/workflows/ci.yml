@@ -117,7 +117,7 @@ jobs:
             | tee results/cosign_verify.json
           gh attestation verify "oci://${IMAGE_NAME}@${{ steps.push.outputs.digest }}" \
             --repo youssefbouaouina/secure-supply-chain-pipeline \
-            | tee results/attestation_verify.txt
+            2>&1 | tee results/attestation_verify.txt
 
       - name: Upload measured results
         if: always()

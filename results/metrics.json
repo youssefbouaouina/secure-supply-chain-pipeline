@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-11-05T03:21:23+00:00",
+  "images": {
+    "v1": {
+      "size_bytes": 500365502,
+      "size_mib": 477.2,
+      "cves": {
+        "Critical": 2,
+        "High": 15,
+        "Medium": 321,
+        "Low": 92,
+        "Negligible": 0,
+        "Unknown": 0,
+        "total": 430
+      },
+      "unique_cves": 156,
+      "sbom_packages": 201
+    },
+    "v2": {
+      "size_bytes": 231697115,
+      "size_mib": 221.0,
+      "cves": {
+        "Critical": 2,
+        "High": 23,
+        "Medium": 42,
+        "Low": 19,
+        "Negligible": 0,
+        "Unknown": 0,
+        "total": 86
+      },
+      "unique_cves": 65,
+      "sbom_packages": 114
+    }
+  },
+  "policy": {
+    "v1": {
+      "conftest_failures": 8,
+      "kube_linter_findings": 8
+    },
+    "v2": {
+      "conftest_failures": 0,
+      "kube_linter_findings": 0
+    }
+  }
+}

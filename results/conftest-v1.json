@@ -1,0 +1,57 @@
+[
+	{
+		"filename": "k8s/deployment-v1.yaml",
+		"namespace": "main",
+		"successes": 1,
+		"failures": [
+			{
+				"msg": "container \"app\" does not set seccompProfile RuntimeDefault",
+				"metadata": {
+					"query": "data.main.deny"
+				}
+			},
+			{
+				"msg": "container \"app\" has a writable root filesystem",
+				"metadata": {
+					"query": "data.main.deny"
+				}
+			},
+			{
+				"msg": "container \"app\" has no CPU limit",
+				"metadata": {
+					"query": "data.main.deny"
+				}
+			},
+			{
+				"msg": "container \"app\" has no memory limit",
+				"metadata": {
+					"query": "data.main.deny"
+				}
+			},
+			{
+				"msg": "container \"app\" is privileged",
+				"metadata": {
+					"query": "data.main.deny"
+				}
+			},
+			{
+				"msg": "container \"app\" may run as root",
+				"metadata": {
+					"query": "data.main.deny"
+				}
+			},
+			{
+				"msg": "container \"app\" uses the :latest tag",
+				"metadata": {
+					"query": "data.main.deny"
+				}
+			},
+			{
+				"msg": "pod uses hostNetwork",
+				"metadata": {
+					"query": "data.main.deny"
+				}
+			}
+		]
+	}
+]
