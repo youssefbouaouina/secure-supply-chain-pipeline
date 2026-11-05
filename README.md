@@ -1,5 +1,9 @@
 ﻿# secure-supply-chain-pipeline
 
+[![CI](https://github.com/youssefbouaouina/secure-supply-chain-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/youssefbouaouina/secure-supply-chain-pipeline/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Java 21](https://img.shields.io/badge/java-21-blue)
+
 A DevSecOps reference pipeline for a Spring Boot service: SBOM, vulnerability gate, signed
 image, SLSA provenance and policy-as-code, with the before/after hardening measured, not
 claimed.
