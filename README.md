@@ -1,7 +1,7 @@
-# secure-supply-chain-pipeline
+﻿# secure-supply-chain-pipeline
 
 A DevSecOps reference pipeline for a Spring Boot service: SBOM, vulnerability gate, signed
-image, SLSA provenance and policy-as-code — with the before/after hardening measured, not claimed.
+image, SLSA provenance and policy-as-code â€” with the before/after hardening measured, not claimed.
 
 ## Why
 
@@ -82,5 +82,6 @@ See [`SOURCES.md`](SOURCES.md). Code: MIT.
 
 ## Author
 
-**Youssef Bouaouina** — [github.com/youssefbouaouina](https://github.com/youssefbouaouina) ·
+**Youssef Bouaouina** â€” [github.com/youssefbouaouina](https://github.com/youssefbouaouina) Â·
 [portfolio](https://youssefbouaouina.github.io/)
+

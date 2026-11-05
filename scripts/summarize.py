@@ -45,7 +45,9 @@ def unique_cves(path: Path) -> int:
 
 def package_count(path: Path) -> int:
     data = load_json(path, {})
-    return len(data.get("artifacts", []))
+    # Syft's SPDX JSON calls the list "packages"; CycloneDX calls it
+    # "components". Support both so the number is never silently zero.
+    return len(data.get("packages") or data.get("components") or data.get("artifacts") or [])
 
 
 def size_bytes(path: Path) -> int | None:
@@ -146,7 +148,9 @@ def write(metrics: dict) -> None:
         "```",
         "",
         "Grype, Syft, Conftest and kube-linter versions are pinned in `.github/workflows/ci.yml`.",
-        "The quality gate is `grype app:v2 --fail-on critical`; the pipeline fails if it finds one.",
+        "The quality gate is `grype app:v2 --fail-on critical --only-fixed`; the pipeline fails on a",
+        "Critical finding that has a published fix. Unfixed Critical advisories are still counted in",
+        "the totals above.",
         "",
     ]
     (RESULTS / "RESULTS.md").write_text("\n".join(lines), encoding="utf-8")
